@@ -76,17 +76,17 @@ class App extends AppId implements \JsonSerializable
             );
         }
 
-        if (empty($builder->getLocale())) {
-            throw new \InvalidArgumentException(
-                'Locale cannot be null or empty. Solution: $appBuilder->setLocale(...);'
-            );
-        }
+//         if (empty($builder->getLocale())) {
+//             throw new \InvalidArgumentException(
+//                 'Locale cannot be null or empty. Solution: $appBuilder->setLocale(...);'
+//             );
+//         }
 
-        if (empty($builder->getCountry())) {
-            throw new \InvalidArgumentException(
-                'Country cannot be null or empty. Solution: $appBuilder->setCountry(...);'
-            );
-        }
+//         if (empty($builder->getCountry())) {
+//             throw new \InvalidArgumentException(
+//                 'Country cannot be null or empty. Solution: $appBuilder->setCountry(...);'
+//             );
+//         }
 
         if (empty($builder->getName())) {
             throw new \InvalidArgumentException(
