@@ -36,7 +36,7 @@ class GPlayApps
     public const DEFAULT_LOCALE = 'en_US';
 
     /** @var string Default request country. */
-    public const DEFAULT_COUNTRY = 'us';
+    public const DEFAULT_COUNTRY = '';
 
     /** @var string Google Play base url. */
     public const GOOGLE_PLAY_URL = 'https://play.google.com';
@@ -74,8 +74,8 @@ class GPlayApps
      * @see GPlayApps::DEFAULT_COUNTRY Default request country.
      */
     public function __construct(
-        string $locale = self::DEFAULT_LOCALE,
-        string $country = self::DEFAULT_COUNTRY
+        ?string $locale = self::DEFAULT_LOCALE,
+        ?string $country = self::DEFAULT_COUNTRY
     ) {
         $this
             ->setDefaultLocale($locale)
@@ -1276,7 +1276,7 @@ class GPlayApps
      *
      * @return GPlayApps returns the current class instance to allow method chaining
      */
-    public function setDefaultCountry(string $defaultCountry): self
+    public function setDefaultCountry(?string $defaultCountry): self
     {
         $this->defaultCountry = !empty($defaultCountry)
             ? $defaultCountry
